@@ -15,7 +15,7 @@ Cloud & Infraestructura: AWS.
 
 🌱 Actualmente busco expandir y consolidar mi experiencia en arquitecturas de Cloud Computing.
 
-⚡ Dato curioso: Soy un fiel creyente de la productividad, por lo que inicio mis mañanas con una rutina de planificación estricta; una organización que también me sirve para armar las alineaciones en la cancha de Fútbol 7.
+⚡ MomentumShark: "Siempre en momiviento" 
 
 📫 Conecta conmigo
 GitHub: @Essaw-Cortez
