@@ -1,90 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Landing Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
+
 <body>
 
-    
-         <!-- HEADER / NAVBAR -->
-    
+
+    <!-- HEADER / NAVBAR -->
+
     <header>
         <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="imagenes-iconos\joy_face.jpeg" alt="Logo" class="logo-img" style="max-width: 60px;"> MomentumShark
+            <div class="container position-relative d-flex justify-content-between align-items-center">
+
+                <!-- Logo Centrado Absolutamente con el color Azul Tiburón -->
+                <a class="navbar-brand position-absolute top-50 start-50 translate-middle m-0 custom-logo-color"
+                    href="#home">
+                    MomentumShark 🦈
                 </a>
-                
-                <!-- Enlaces de navegación -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#CV">CV</a></li>
+
+                <!-- Menú Desplegable con el icono (Alineado a la derecha) -->
+                <div class="dropdown ms-auto">
+                    <!-- Botón transparente con la imagen -->
+                    <button class="menu-icon-btn dropdown-toggle" type="button" id="menuPortafolio"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="imagenes-iconos\menu_icono.png" alt="Menú" class="menu-icon-img">
+                    </button>
+                    <!-- Menú con los colores de tu tema Cyber Tech -->
+                    <ul class="dropdown-menu dropdown-menu-end custom-dropdown" aria-labelledby="menuPortafolio">
+                        <li><a class="dropdown-item nav-link" href="#expertise">Skills</a></li>
+                        <li><a class="dropdown-item nav-link" href="#about">About me</a></li>
+                        <li><a class="dropdown-item nav-link" href="#portfolio">Portafolio</a></li>
+                        <li><a class="dropdown-item nav-link" href="#CV">CV</a></li>
+                        <li><a class="dropdown-item nav-link" href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
 
-                <!-- Botón de Contacto -->
-                <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Presentación -->>
+        <!-- Presentación -->
         <section id="home" class="hero-section py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Texto de presentación -->
                     <div class="col-md-6">
                         <h1 class="display-2 fw-bold">Hola, <span>soy Essaw Cortez🦈</span><br></h1>
-                        <p class="lead">Desarrollador Backend Java especializado en arquitecturas sólidas y escalables. Apasionado por la creación de sistemas eficientes y la resolución de problemas técnicos complejos</p>
+                        <p class="lead">Desarrollador Backend Java especializado en arquitecturas sólidas y escalables.
+                            Apasionado por la creación de sistemas eficientes y la resolución de problemas técnicos
+                            complejos</p>
                         <!-- Información de Contacto -->
                         <ul class="contacto-list">
-  
-                                <!-- Icono de Ubicación con Link -->
-                                <li class="contacto-item">
-                                
-                                        <img src="imagenes-iconos\Map_Pin.png" alt="Ubicación Pin Icon" class="icono-ubicacion" title="Ubicación">
+
+                            <!-- Icono de Ubicación con Link -->
+                            <li class="contacto-item">
+
+                                <img src="imagenes-iconos\Map_Pin.png" alt="Ubicación Pin Icon" class="icono-ubicacion"
+                                    title="Ubicación">
                                 </a>
                                 <span>Monterrey, Nuevo León, México</span>
-                                </li>
-  
-                                <!-- Icono de Estado con Link -->
-                                <li class="contacto-item">
-                                    <a href="#contact">
-                                <img src="imagenes-iconos\Check.png" alt="Status Circle Icon" class="icono-estado" title="Estado">
-                                    </a>
-                                    <span>Disponible para nuevos proyectos</span>
-                                    </li>
-  
-                                    </ul>
+                            </li>
 
-                                    <!-- Fila de Iconos de Redes Sociales -->
-                                    <ul class="redes-sociales-list">
-  
-                                        <!-- GitHub -->
-                                                <li>
-                                                <a href="https://github.com/Essaw-Cortez" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                                <img src="imagenes-iconos\logos_iconos\github_icono.png" alt="GitHub Logo" class="redes-icono" style="max-width: 60px;">
-                                                </a>
-                                                </li>
-  
-                                                <!-- LinkedIn -->
-                                                <li>
-                                        <a href="https://www.linkedin.com/in/brandocortez/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                        <img src="imagenes-iconos\logos_iconos\Linkedin_icono.png" alt="LinkedIn Logo" class="redes-icono" style="max-width: 60px;">
-                                        </a>
-                                                </li>
-  
-</ul>
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                            <!-- Icono de Estado con Link -->
+                            <li class="contacto-item">
+                                <a href="#contact">
+                                    <img src="imagenes-iconos\Check.png" alt="Status Circle Icon" class="icono-estado"
+                                        title="Estado">
+                                </a>
+                                <span>Disponible para nuevos proyectos</span>
+                            </li>
+
+                        </ul>
+
+                        <!-- Fila de Iconos de Redes Sociales -->
+                        <ul class="redes-sociales-list">
+
+                            <!-- GitHub -->
+                            <li>
+                                <a href="https://github.com/Essaw-Cortez" target="_blank" rel="noopener noreferrer"
+                                    title="GitHub">
+                                    <img src="imagenes-iconos\logos_iconos\github_icono.png" alt="GitHub Logo"
+                                        class="redes-icono" style="max-width: 35px;">
+                                </a>
+                            </li>
+
+                            <!-- LinkedIn -->
+                            <li>
+                                <a href="https://www.linkedin.com/in/brandocortez/" target="_blank"
+                                    rel="noopener noreferrer" title="LinkedIn">
+                                    <img src="imagenes-iconos\logos_iconos\Linkedin_icono.png" alt="LinkedIn Logo"
+                                        class="redes-icono" style="max-width: 35px;">
+                                </a>
+                            </li>
+
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary">Get In Touch</a>
                     </div>
                     <!-- Imagen representativa mia -->
                     <div class="col-md-6 text-center">
@@ -94,86 +113,139 @@
             </div>
         </section>
 
-        <!-- Sección de experiencia-->>
-        <section id="expertise" class="py-5 bg-light">
+        <!-- Sección de experiencia-->
+        <section id="expertise" class="py-5">
             <div class="container">
                 <div class="text-center mb-5">
-                    <span class="badge rounded-pill bg-light text-secondary border px-3 py-2 mb-3 fw-normal" style="font-size: 14px;">Skills</span>
+                    <span class="badge rounded-pill text-secondary border px-3 py-2 mb-3 fw-normal"
+                        style="font-size: 14px;">Skills</span>
                 </div>
                 <div class="container text-center">
-                    <div><p class="fs-5 text-secondary">Frontend</p></div>
-  <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
-  
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\HTML_logo.png" alt="HTML" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\bootstrap_logo.png" alt="Bootstap" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\css_logo.png" alt="CSS" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos/logos_iconos/JS_logo.png" alt="Javascript" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    
-    
-  </div>
-</div>
-<div class="container text-center">
-                    <div><p class="fs-5 text-secondary">Backend</p></div>
-  <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
-  
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\Java_logo.png" alt="Java" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\spring_logo.png" alt="Springboot" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\MySQL.png" alt="MySQL" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\rest_api.png" alt="RESTful APIS" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    
-    
-  </div>
-</div>
-<div class="container text-center">
-                    <div><p class="fs-5 text-secondary">Herramientas</p></div>
-  <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
-  
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\git_logo.png" alt="Git" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\github_logo.png" alt="GitHub" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos/logos_iconos/figma_logo.png" alt="Figma" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos/logos_iconos/jira_logo.png" alt="Jira" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    <div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\VScode_logo.png" alt="VScode" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div><div class="col">
-      <div class="p-3"><img src="imagenes-iconos\logos_iconos\intelliJ.png" alt="IntelliJ" class="img-fluid hero-img" style="max-width: 120px;"></div>
-    </div>
-    
-  </div>
-</div>
-                
+                    <div>
+                        <p class="fs-5 text-secondary">Frontend</p>
+                    </div>
+                    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+
+                        <div class="col">
+                            <div class="p-3">
+                                <img src="imagenes-iconos/logos_iconos/HTML_icono.png" alt="HTML"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">HTML</span>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\bootstrap_icono.png" alt="Bootstap"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Bootstap</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos/logos_iconos/css_icono.png" alt="CSS"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">CSS</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos/logos_iconos/JS_logo.png" alt="Javascript"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Javascript</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <div>
+                        <p class="fs-5 text-secondary">Backend</p>
+                    </div>
+                    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\Java_icono.png" alt="Java"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Java</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\spring_icono.png" alt="Springboot"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Springboot</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\MySQL.png" alt="MySQL"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\rest_api.png" alt="RESTful APIS"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">RESTful APIS</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <div>
+                        <p class="fs-5 text-secondary">Herramientas</p>
+                    </div>
+                    <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\git_icono.png" alt="Git"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Git</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\github_icono.png" alt="GitHub"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">GitHub</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos/logos_iconos/figma_logo.png" alt="Figma"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Figma</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\jira_icono.png" alt="Jira"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">Jira</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\vscode_icono.png" alt="VScode"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">VScode</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="imagenes-iconos\logos_iconos\intelliJ.png" alt="IntelliJ"
+                                    class="img-fluid hero-img" style="max-width: 120px;">
+                                <span class="skill-description">IntelliJ</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-                
+
         </section>
 
         <!-- About me-->
         <section id="about" class="py-5">
             <div class="text-center mb-5">
-                    <span class="badge rounded-pill bg-light text-secondary border px-3 py-2 mb-3 fw-normal" style="font-size: 14px;">About me</span>
-                </div>
+                <span class="badge rounded-pill text-secondary border px-3 py-2 mb-3 fw-normal"
+                    style="font-size: 14px;">About me</span>
+            </div>
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Imagen About -->
@@ -182,186 +254,281 @@
                     </div>
                     <!-- Texto Sobre -->
                     <div class="col-md-6">
-                        
-                        
-                        <p>Desarrollador de Software con sólida experiencia en análisis de datos y resolución de problemas complejos. Vengo de liderar equipos
-                        multidisciplinarios y asegurar la calidad mediante tecnología y toma de decisiones analíticas. </p>
+                        <h4 class="card-title">¿Quién soy?</h4>
+                        <p></p>
+
+
+                        <p>Desarrollador de Software con sólida experiencia en análisis de datos y resolución de
+                            problemas complejos. Vengo de liderar equipos
+                            multidisciplinarios y asegurar la calidad mediante tecnología y toma de decisiones
+                            analíticas. </p>
                         <p>Hoy domino herramientas clave para
-                        desarrollo backend con el objetivo de incorporarme al sector de TI para aportar soluciones de desarrollo ágiles, innovadoras y de alto
-                        impacto. Enfocado en el crecimiento profesional dentro del desarrollo backend, bases de datos y Cloud Computing (AWS). </p>
+                            desarrollo backend con el objetivo de incorporarme al sector de TI para aportar soluciones
+                            de desarrollo ágiles, innovadoras y de alto
+                            impacto. Enfocado en el crecimiento profesional dentro del desarrollo backend, bases de
+                            datos y Cloud Computing (AWS). </p>
+                        <p></p>
+                        <h4 class="card-title">¿Por qué <span>MomentumSahrk 🦈</span>?</h4>
+                        <p></p>
+                        <p>Tiburón representa mis habilidades consolidadas en análisis y liderazgo. Momentum es el
+                            impulso constante hacia la innovación tecnológica.
+                            Este tiburón en la silla es un profesional seguro de su camino que ha encontrado su
+                            momentum, impulsado por la 'Fuerza' de su pasión
+                            y su progreso perpetuo en desarollo de software.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Portafolio -->
-        <section id="portfolio" class="py-5 bg-light">
-            <div class="container"> 
+        <section id="portfolio" class="py-5">
+            <div class="container">
                 <div class="text-center mb-5">
-                    <span class="badge rounded-pill bg-light text-secondary border px-3 py-2 mb-3 fw-normal" style="font-size: 14px;">Mi Portafolio</span>
+                    <span class="badge rounded-pill text-secondary border px-3 py-2 mb-3 fw-normal"
+                        style="font-size: 14px;">Mi Portafolio</span>
                     <p class="fs-5 text-secondary">Proyectos recientes.</p>
                 </div>
-                
-                
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button> -->
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
 
-                <div class="row">
-                    <!-- Proyecto 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="" alt="HydroFlow Hackaton" class="card-img-top">
-                            <div class="card-body">
-                                <h4 class="card-title">Hackaton 1</h4>
-                                <p class="card-text">aca va info sobre el primer hackaton</p>
-                                <a href="#" class="view-project">View project ↗</a> <!-- Link pendiente -->
+                                <!-- Landing page-->
+                                <div class="col-md-12 mb-12">
+                                    <div class="card h-120">
+                                        <!-- Nuevo contenedor para el efecto scroll -->
+                                        <div class="card-img-scroll">
+
+                                            <img src="proyectos evidencia\FSSS_hydroflow.png"
+                                                alt="Captura del LandingPage" class="scroll-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">LandingPage -Hydroflow-</h4>
+                                            <p class="card-text">Landing page para una tienda de articulos deportivos.
+                                                Implementa interfaz dinámica para cada sección, carrito de compras,
+                                                promociones, misión, visión, acerca de, contacto, y diseño atractivo
+                                                para el cliente</p>
+                                            <a href="https://github.com/NinjatoTim/hackathon-generation-equipo2"
+                                                class="view-project">View project</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Proyecto 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="" alt="Hackaton 2" class="card-img-top">
-                            <div class="card-body">
-                                <h4 class="card-title">Hackaton 2</h4>
-                                <p class="card-text">aca va info sobre el primer hackaton</p>
-                                <a href="#" class="view-project">View project ↗</a> <!-- Link pendiente -->
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <!-- Proyecto E-commerce -->
+                                <div class="col-md-12 mb-12">
+                                    <div class="card h-120">
+                                        <!-- Nuevo contenedor para el efecto scroll -->
+                                        <div class="card-img-scroll">
+                                            <!-- Sustituye esta ruta por tu captura vertical -->
+                                            <img src="proyectos evidencia\FSSS_yeya.png" alt="Captura del E-commerce"
+                                                class="scroll-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">E-commers La tiendita de la Yeya</h4>
+                                            <p class="card-text">Tienda en línea interactiva para joyería temática.
+                                                Implementa
+                                                interfaz dinámicas de catálogo, carrito de compras, Acerca de nosotros,
+                                                contacto y
+                                                diseño 100% responsivo.</p>
+                                            <a href="https://github.com/AriVeraI/E-commerce_LaTienditadelaYuya/tree/Develop"
+                                                class="view-project">View project</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Proyecto 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="" alt="Proyecto integrador" class="card-img-top">
-                            <div class="card-body">
-                                <h4 class="card-title">E-commers La tiendita de la Yeya</h4>
-                                <p class="card-text">aca va info sobre el producto integrador</p>
-                                <a href="#" class="view-project">View project ↗</a> <!-- Link pendiente -->
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <!-- Proyecto LandingPage -->
+                                <!-- <div class="col-md-12 mb-12">
+                                    <div class="card h-120">
+                                        
+                                        <div class="card-img-scroll">
+                                            
+                                            <img src="proyectos evidencia\FSSS_yeya.png" alt="Captura del E-commerce"
+                                                class="scroll-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">E-commers La tiendita de la Yeya</h4>
+                                            <p class="card-text">Tienda en línea interactiva para joyería temática.
+                                                Implementa
+                                                interfaz dinámicas de catálogo, carrito de compras, Acerca de nosotros,
+                                                contacto y
+                                                diseño 100% responsivo.</p>
+                                            <a href="https://github.com/AriVeraI/E-commerce_LaTienditadelaYuya/tree/Develop"
+                                                class="view-project">View project</a>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
-            <div class="text-center mb-5"> 
+            <div class="text-center mt-4 mb-5">
                 <a href="https://github.com/Essaw-Cortez" target="_blank" class="btn btn-danger">Visit My GitHub</a>
             </div>
         </section>
 
         <!-- Sección sobre CV -->
         <!-- Contenedor principal con padding vertical (py-5) -->
-    <section class="container py-5" style="max-width: 900px;">
-        
-        <!-- Encabezado de la sección centrado -->
-        <div class="text-center mb-5">
-            <span class="badge rounded-pill bg-light text-secondary border px-3 py-2 mb-3 fw-normal" style="font-size: 14px;">Experience</span>
-            <p class="fs-5 text-secondary">Mi experiencia a lo largo del tiempo:</p>
-        </div>
+        <section id="CV" class="container py-5" style="max-width: 900px;">
 
-        <!-- Targeta Generation -->
-        
-        <div class="card border-0 shadow-sm rounded-4 mb-4">
-            <div class="card-body p-4 p-md-5">
-                <div class="row align-items-start">
-                    
-                    <!-- Columna 1: Logo -->
-                    <div class="col-12 col-md-3 mb-3 mb-md-0 text-center text-md-start">
-                        
-                        <img src="imagenes-iconos\Generation_Mexico_logo_NEW-BLUE.webp" alt="Logo Upwork" class="img-fluid" style="max-width: 120px;">    
-                    </div>
-                    
-                    <!-- Columna 2: Puesto y Tareas -->
-                    <div class="col-12 col-md-6 mb-3 mb-md-0">
-                        <h3 class="h5 fw-bold text-dark mb-3">Full-stack Java Developer Jr</h3>
-                        <ul class="text-secondary mb-0" style="padding-left: 20px; line-height: 1.6;">
-                            <li class="mb-2">Desarrollé una plataforma e-commerce de una tienda con giro de bisutería y accesorios..</li>
-                            <li class="mb-2">Elaboré componentes funcionales en el frontend haciendo uso de HTML, CSS, JavaScript y Bootstrap, desplegando un sistema de catálogo visual, gestión de carrito y validación de usuarios.</li>
-                            <li class="mb-2">Diseñé la lógica de la información y preparé el entorno del cliente web (frontend) para su conexión e integración con servicios backend gestionados bajo Java, Spring Boot y bases de datos MySQL</li>
-                            
-                        </ul>
-                    </div>
-                
-                    <!-- Columna 3: Fecha alineada a la derecha en PC y a la izquierda en móvil -->
-                    <div class="col-12 col-md-3 text-start text-md-end">
-                        <p class="text-secondary mb-0">Jun 2026 - Presente</p>
-                    </div>
+            <!-- Encabezado de la sección centrado -->
+            <div class="text-center mb-5">
+                <span class="badge rounded-pil text-secondary border px-3 py-2 mb-3 fw-normal"
+                    style="font-size: 14px;">Experiencia.</span>
+                <p class="fs-5 text-secondary">Mi experiencia a lo largo del tiempo.</p>
+            </div>
 
+            <!-- Targeta Generation -->
+
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body p-4 p-md-5">
+                    <div class="row align-items-start">
+
+                        <!-- Columna 1: Logo -->
+                        <div class="col-12 col-md-3 mb-3 mb-md-0 text-center text-md-start">
+
+                            <img src="imagenes-iconos\Generation_Mexico_logo_NEW-BLUE.webp" alt="Logo Upwork"
+                                class="img-fluid" style="max-width: 120px;">
+                        </div>
+
+                        <!-- Columna 2: Puesto y Tareas -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <h4 class="card-title">Full-stack Java Developer Jr</h4>
+                            <ul class="text-secondary mb-0" style="padding-left: 20px; line-height: 1.6;">
+                                <li class="mb-2">Desarrollé una plataforma e-commerce de una tienda con giro de
+                                    bisutería y accesorios..</li>
+                                <li class="mb-2">Elaboré componentes funcionales en el frontend haciendo uso de HTML,
+                                    CSS, JavaScript y Bootstrap, desplegando un sistema de catálogo visual, gestión de
+                                    carrito y validación de usuarios.</li>
+                                <li class="mb-2">Diseñé la lógica de la información y preparé el entorno del cliente web
+                                    (frontend) para su conexión e integración con servicios backend gestionados bajo
+                                    Java, Spring Boot y bases de datos MySQL</li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3: Fecha alineada a la derecha en PC y a la izquierda en móvil -->
+                        <div class="col-12 col-md-3 text-start text-md-end">
+                            <p class="text-secondary mb-0">Jun 2026 - Presente</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tarjeta Navistar -->
-        <div class="card border-0 shadow-sm rounded-4 mb-4">
-            <div class="card-body p-4 p-md-5">
-                <div class="row align-items-start">
-                    
-                    <!-- Columna 1: Logo -->
-                    <div class="col-12 col-md-3 mb-3 mb-md-0 text-center text-md-start">
-                        <img src="imagenes-iconos\navistar-logo.png" alt="Logo Upwork" class="img-fluid" style="max-width: 120px;">
-                    </div>
-                    
-                    <!-- Columna 2: Puesto y Tareas -->
-                    <div class="col-12 col-md-6 mb-3 mb-md-0">
-                        <h3 class="h5 fw-bold text-dark mb-3">Product Engineer Jr</h3>
-                        <ul class="text-secondary mb-0" style="padding-left: 20px; line-height: 1.6;">
-                            <li class="mb-2">Desarrollé nuevas opciones y nuevas combinaciones de características necesarias para satisfacer las necesidades de los clientes, para asegurar diseño, ensamble y/o función de los componentes y sistemas que interactuaban entre sí. </li>
-                            <li class="mb-2">Analicé, aprobé y emití solicitudes de contención como sustituciones y desviaciones sin afectar la integridad del producto.</li>
-                            <li class="mb-2">Gestioné la identificación, análisis y resolución de problemas de ingeniería relacionados con el chasis y frame del producto.</li>
-                            
-                        </ul>
-                    </div>
-                    
-                    <!-- Columna 3: Fecha -->
-                    <div class="col-12 col-md-3 text-start text-md-end">
-                        <p class="text-secondary mb-0">Jul 2022 - Jun 2024</p>
-                    </div>
+            <!-- Tarjeta Navistar -->
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body p-4 p-md-5">
+                    <div class="row align-items-start">
 
+                        <!-- Columna 1: Logo -->
+                        <div class="col-12 col-md-3 mb-3 mb-md-0 text-center text-md-start">
+                            <img src="imagenes-iconos\navistar-logo.png" alt="Logo Upwork" class="img-fluid"
+                                style="max-width: 120px;">
+                        </div>
+
+                        <!-- Columna 2: Puesto y Tareas -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <h4 class="card-title">Product Engineer Jr</h4>
+                            <ul class="text-secondary mb-0" style="padding-left: 20px; line-height: 1.6;">
+                                <li class="mb-2">Desarrollé nuevas opciones y nuevas combinaciones de características
+                                    necesarias para satisfacer las necesidades de los clientes, para asegurar diseño,
+                                    ensamble y/o función de los componentes y sistemas que interactuaban entre sí. </li>
+                                <li class="mb-2">Analicé, aprobé y emití solicitudes de contención como sustituciones y
+                                    desviaciones sin afectar la integridad del producto.</li>
+                                <li class="mb-2">Gestioné la identificación, análisis y resolución de problemas de
+                                    ingeniería relacionados con el chasis y frame del producto.</li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3: Fecha -->
+                        <div class="col-12 col-md-3 text-start text-md-end">
+                            <p class="text-secondary mb-0">Jul 2022 - Jun 2024</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="text-center">
+                <a href="ruta/a/tu/archivo.pdf" download="Essaw_Cortez_CV.pdf" class="btn btn-primary">Descargar CV</a>
+            </div>
 
-    </section>
+        </section>
 
-        <!-- Form de contacto -->
-        <section id="contact" class="py-5 text-center  bg-light">
-            <div class="container">
-                <p class="subtitle mb-1">Get In Touch</p>
-                <h2 class="mb-2">Contact me</h2>
-                <p class="mb-4">Si deseas que estemos en contacto, llena el siguiente formulario.</p>
-                
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <form>
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contact-section py-5">
+            <div class="container text-center">
+                <div class="text-center mb-5">
+                    <span class="badge rounded-pil text-secondary border px-3 py-2 mb-3 fw-normal"
+                        style="font-size: 14px;">Contacto</span>
+                    <p class="fs-5 text-secondary">Si deseas que estemos en contacto, llena el siguiente formulario.</p>
+                </div>
+
+                <div class="row align-items-center">
+                    <!-- Columna del Formulario -->
+                    <div class="col-md-7 text-start">
+
+                        <form id="contact-form" action="https://formspree.io/f/xlgqzjvg" method="POST">
                             <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="firstName" class="form-label text-start d-block">Nombre(s)</label>
-                                    <input type="text" class="form-control" id="firstName">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="firstName" class="form-label">Nombre(s)</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="lastName" class="form-label text-start d-block">Apellido(s)</label>
-                                    <input type="text" class="form-control" id="lastName">
+                                    <label for="lastName" class="form-label">Apellido(s)</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
                                 </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-12">
-                                    <label for="email" class="form-label text-start d-block">Email</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                
                             </div>
                             <div class="mb-3">
-                                <label for="topic" class="form-label text-start d-block">Choose a topic</label>
-                                <select class="form-select" id="topic">
-                                    <option selected>Select one...</option>
-                                    <option value="1">Propuesta laboral</option>
-                                    <option value="2">Colaboración</option>
-                                    <option value="3">Otro</option>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="topic" class="form-label">Selecciona una opción</label>
+                                <select class="form-select" id="topic" name="topic" required>
+                                    <option value="" selected disabled>Selecciona uno...</option>
+                                    <option value="Oferta laboral">Oferta laboral</option>
+                                    <option value="Programar un meeting">Programar un meeting</option>
+                                    <option value="Other">Otro</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="message" class="form-label text-start d-block">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."></textarea>
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                             </div>
-                            
-                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Subir</button>
+                            </div>
                         </form>
+                    </div>
+
+                    <!-- Columna de la Imagen -->
+                    <div class="col-md-5 text-center mt-5 mt-md-0 position-relative">
+
+                        <img src="imagenes-iconos\happy_Shark.png" alt="Shark in Star Wars hoodie"
+                            class="img-fluid shark-img">
+
                     </div>
                 </div>
             </div>
@@ -369,38 +536,28 @@
     </main>
 
     <!-- El futer -->
-    <footer class="bg-light py-4">
+    <footer class="py-4">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
-                <!-- Logo Footer -->
-                <div>
-                    
-                    <img src="imagenes-iconos\joy_face.jpeg" alt="Logo" class="logo-img" style="max-width: 60px;">
-                
-                </div>
-                <!-- Links Footer -->
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"><a href="#home" class="text-dark">Home</a></li>
-                    <li class="list-inline-item"><a href="#portfolio" class="text-dark">Portfolio</a></li>
-                    <li class="list-inline-item"><a href="#about" class="text-dark">About me</a></li>
-                    <li class="list-inline-item"><a href="#CV" class="text-dark">CV</a></li>
-                    <li class="list-inline-item"><a href="#contact" class="text-dark">Contact</a></li>
-                    
-                </ul>
+
+
                 <!-- Redes Sociales -->
                 <div class="social-icons">
-                    
+
                 </div>
             </div>
-            
+
             <div class="d-flex justify-content-between">
-                <p class="mb-0 small">Made by Essaw</p>
-                
+                <p class="mb-0 small">Made by Essaw 🦈</p>
+
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
 </body>
 

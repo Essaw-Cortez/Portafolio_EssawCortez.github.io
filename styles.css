@@ -1,0 +1,396 @@
+/* ==========================================================================
+    VARIABLES & TEMA CYBER TECH
+   ========================================================================== */
+:root {
+    --bg-main: #121212;
+    /* Negro asfalto */
+    --bg-card: #1E2328;
+    /* Gris azulado muy oscuro */
+    --bg-card-hover: #242A30;
+    /* Elevación en hover */
+    --text-main: #F0F4F8;
+    /* Blanco frío con ligero tinte azul */
+    --text-muted: #94A3B8;
+    /* Texto secundario legibilidad alta */
+    --primary-blue: #5B7B93;
+    /* Azul/Gris Tiburón */
+    --accent-red: #D92525;
+    /* Rojo Star Wars */
+    --accent-red-hover: #B81D1D;
+    --nav-bg: rgba(18, 18, 18, 0.85);
+}
+
+/* Base global */
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main) !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding-top: 80px;
+}
+
+/* Sobrescribir clases claras de Bootstrap para forzar el modo oscuro */
+.bg-light {
+    background-color: var(--bg-main) !important;
+}
+
+.text-dark,
+.text-secondary {
+    color: var(--text-main) !important;
+}
+
+
+/* ==========================================================================
+    BOTONES & BADGES
+   ========================================================================== */
+.btn-primary,
+.btn-danger {
+    background-color: var(--accent-red) !important;
+    border-color: var(--accent-red) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 14px rgba(217, 37, 37, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+    background-color: var(--accent-red-hover) !important;
+    border-color: var(--accent-red-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217, 37, 37, 0.5);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-blue) !important;
+    color: var(--text-main) !important;
+    border-width: 2px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-blue) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(91, 123, 147, 0.4);
+}
+
+.badge {
+    background-color: var(--bg-card) !important;
+    color: var(--primary-blue) !important;
+    border: 1px solid var(--primary-blue) !important;
+}
+
+/* ==========================================================================
+    HERO & SECCIÓN PRINCIPAL
+   ========================================================================== */
+.hero-section {
+    padding: 80px 0;
+}
+
+.hero-section h1 span {
+    color: var(--primary-blue);
+}
+
+.hero-img,
+.about-img {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.03);
+}
+
+/* Listas de contacto y redes sociales */
+.contacto-list,
+.redes-sociales-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.icono-ubicacion,
+.icono-estado {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.redes-sociales-list {
+    display: flex;
+    gap: 16px;
+}
+
+.redes-icono {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-icono:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 8px var(--primary-blue));
+}
+
+/* ==========================================================================
+    EXPERTISE / LOGOS DE TECNOLOGÍAS
+   ========================================================================== */
+#expertise .col .p-3 {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#expertise .col .p-3:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--primary-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#expertise img {
+    max-width: 70px !important;
+    height: auto;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+#expertise .col .p-3:hover img {
+    filter: grayscale(0%);
+}
+
+/* ==========================================================================
+    TARJETAS (PORTAFOLIO Y EXPERIENCIA)
+   ========================================================================== */
+.card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid rgba(91, 123, 147, 0.15) !important;
+    color: var(--text-main) !important;
+    transition: all 0.3s ease !important;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-title {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.card-text {
+    color: var(--text-muted) !important;
+}
+
+.view-project {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.view-project:hover {
+    color: var(--accent-red);
+}
+
+/* ==========================================================================
+    FORMULARIO DE CONTACTO
+   ========================================================================== */
+.form-control,
+.form-select {
+    background-color: var(--bg-card) !important;
+    border: 1px solid rgba(91, 123, 147, 0.3) !important;
+    color: var(--text-main) !important;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 0 0 0.25rem rgba(217, 37, 37, 0.25) !important;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+    EFECTO OVERLAY PARA SKILLS
+   ========================================================================== */
+
+/* Asegurar que el contenedor maneje el posicionamiento */
+.skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos de la descripción (Oculta por defecto) */
+.skill-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    /* Posicionado al centro pero un poco más abajo */
+    background-color: var(--nav-bg);
+    /* Usa el fondo con desenfoque de tu nav */
+    color: var(--text-main);
+    border: 1px solid var(--primary-blue);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    /* Totalmente transparente inicial */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    /* Evita parpadeos si el mouse toca el texto */
+    z-index: 2;
+}
+
+/* 1. Mostrar el texto al hacer hover en la tarjeta */
+#expertise .col .p-3:hover .skill-description {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    /* Sube suavemente hasta el centro exacto */
+}
+
+/* 2. Opcional: Bajar la opacidad de la imagen para que el texto sea más legible */
+#expertise .col .p-3:hover img {
+    opacity: 0.2;
+    /* Oscurece el logo */
+    filter: grayscale(0%) blur(2px);
+    /* Quita el filtro gris y añade un leve desenfoque */
+}
+
+/* ==========================================================================
+    ESTILOS DEL HEADER Y MENÚ DESPLEGABLE CON ICONO
+   ========================================================================== */
+
+header {
+    position: fixed;
+    /* CAMBIADO: De sticky a fixed */
+    top: 0;
+    left: 0;
+    /* NUEVO: Lo ancla a la izquierda */
+    width: 100%;
+    /* NUEVO: Asegura que cubra toda la pantalla de lado a lado */
+    z-index: 1000;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(91, 123, 147, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* 1. Color Azul Tiburón (#5B7B93) para MomentumShark */
+.custom-logo-color {
+    color: var(--primary-blue) !important;
+}
+
+/* 2. Botón invisible para alojar tu icono de menú */
+.menu-icon-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de escalado suave al pasar el mouse por el icono */
+.menu-icon-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Tamaño de la imagen del menú */
+.menu-icon-img {
+    width: 38px;
+    /* Ajusta este valor si lo quieres más grande o chico */
+    height: auto;
+}
+
+/* Ocultar la pequeña flecha por defecto (caret) que añade Bootstrap */
+.menu-icon-btn.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* 3. Diseño del menú desplegable con tu paleta de colores */
+.custom-dropdown {
+    background-color: var(--bg-card) !important;
+    /* Fondo Secundario: #1E2328 */
+    border: 1px solid var(--primary-blue) !important;
+    /* Borde Azul Tiburón: #5B7B93 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 15px;
+    /* Separación del navbar */
+}
+
+.custom-dropdown .dropdown-item {
+    background-color: transparent !important;
+    color: var(--text-main) !important;
+    /* Texto Principal: #F0F4F8 */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+}
+
+/* Hover de los links del menú */
+.custom-dropdown .dropdown-item:hover,
+.custom-dropdown .dropdown-item:focus {
+    background-color: var(--bg-card-hover) !important;
+    color: var(--accent-red) !important;
+}
+
+/* Evitar la rayita animada debajo de los links en el menú desplegable (opcional, por limpieza visual) */
+.custom-dropdown .nav-link::after {
+    display: none !important;
+}
+
+/* Contenedor que recorta la imagen y mantiene bordes redondeados */
+.card-img-scroll {
+    height: 600px;
+    /* Puedes ajustar esta altura para mostrar más o menos del "Hero" inicial */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 8px;
+    /* Para que coincida con tus tarjetas */
+    border-top-right-radius: 8px;
+}
+
+/* Estado inicial de la imagen */
+.scroll-img {
+    width: 100%;
+    height: auto;
+    transition: transform 5s ease-in-out;
+    /* Duración de 5 segundos, ajustable */
+    transform: translateY(0);
+}
+
+/* Al pasar el mouse, la imagen se desliza hacia arriba */
+.card:hover .scroll-img {
+    /* Desplaza la imagen hacia arriba restando la altura del contenedor */
+    transform: translateY(calc(-100% + 300px));
+}
