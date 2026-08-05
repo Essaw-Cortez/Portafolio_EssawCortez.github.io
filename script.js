@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Animación Reveal al hacer Scroll
+    // Animación "Reveal" al hacer "Scroll"
     const revealElements = document.querySelectorAll(
         "section, .card, .contacto-item, #expertise .col"
     );
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll(); // Ejecutar al cargar la página
 
-    // 2. Resaltar enlace de la Navbar según la sección activa (Scrollspy)
+    // Resaltar enlace de la Navbar según la sección activa ("Scrollspy")
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
 
@@ -46,22 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", activateNavLink);
 
-    // 3. Cerrar el menú desplegable en móvil al hacer clic en un enlace
-    const navItems = document.querySelectorAll(".navbar-collapse .nav-link, .navbar-collapse .btn");
-    const navbarCollapse = document.querySelector(".navbar-collapse");
 
-    navItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            if (navbarCollapse.classList.contains("show")) {
-                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                if (bsCollapse) {
-                    bsCollapse.hide();
-                }
-            }
-        });
-    });
-
-    // 4. Efecto de elevación en la Navbar al hacer Scroll
+    // Efecto de elevación en la Navbar al hacer "Scroll"
     const header = document.querySelector("header");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {

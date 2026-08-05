@@ -211,6 +211,7 @@ body {
     color: var(--accent-red);
 }
 
+
 /* ==========================================================================
     FORMULARIO DE CONTACTO
    ========================================================================== */
@@ -237,11 +238,6 @@ body {
     EFECTO OVERLAY PARA SKILLS
    ========================================================================== */
 
-/* Asegurar que el contenedor maneje el posicionamiento */
-.skill-card {
-    position: relative;
-    overflow: hidden;
-}
 
 /* Estilos de la descripción (Oculta por defecto) */
 .skill-description {
@@ -370,27 +366,87 @@ header {
 
 /* Contenedor que recorta la imagen y mantiene bordes redondeados */
 .card-img-scroll {
-    height: 600px;
+    height: 700px;
     /* Puedes ajustar esta altura para mostrar más o menos del "Hero" inicial */
     width: 100%;
-    overflow: hidden;
+    overflow-y: auto;
+    /* Permite scrollear hacia arriba y abajo */
     position: relative;
     border-top-left-radius: 8px;
-    /* Para que coincida con tus tarjetas */
     border-top-right-radius: 8px;
 }
+
 
 /* Estado inicial de la imagen */
 .scroll-img {
     width: 100%;
     height: auto;
-    transition: transform 5s ease-in-out;
-    /* Duración de 5 segundos, ajustable */
-    transform: translateY(0);
+    display: block;
 }
 
-/* Al pasar el mouse, la imagen se desliza hacia arriba */
-.card:hover .scroll-img {
-    /* Desplaza la imagen hacia arriba restando la altura del contenedor */
-    transform: translateY(calc(-100% + 300px));
+/*
+--------------- CARRUSEL DE SOFT SKILS ------------------
+*/
+
+/* Oculta lo que sale del contenedor y aplica un degradado en los bordes para que aparezcan suavemente */
+.skills-scroller {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    /* Máscara opcional para difuminar los extremos izquierdo y derecho */
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff 90%, transparent);
+}
+
+/* El riel que se desplaza */
+.skills-track {
+    display: flex;
+    /* Cambiamos inline-flex por flex */
+    width: max-content;
+    /* Obliga al riel a medir exactamente lo que miden los botones juntos */
+    animation: scrollTrack 10s linear infinite;
+}
+
+/* Detener la animación cuando el usuario pasa el cursor (opcional, pero buena práctica) */
+.skills-scroller:hover .skills-track {
+    animation-play-state: paused;
+}
+
+.skills-slide {
+    display: flex;
+    align-items: center;
+}
+
+/* La animación que desplaza exactamente la mitad del contenido (el primer bloque) antes de reiniciarse sin cortes */
+@keyframes scrollTrack {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* ==========================================================================
+    AJUSTES RESPONSIVOS PARA DISPOSITIVOS MÓVILES
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+    /* Reduce la altura del contenedor de la imagen en móviles */
+    .card-img-scroll {
+        height: 350px; /* Ajusta este valor (ej. 300px o 400px) según tu preferencia */
+    }
+
+    /* Opcional: Ajustes adicionales para espaciado de controles */
+    .carousel-indicators {
+        bottom: 5px; /* Sube ligeramente los indicadores */
+    }
+    
+    .view-project {
+        display: block; /* Hace que el enlace de proyecto ocupe todo el ancho */
+        margin-bottom: 10px;
+    }
 }
