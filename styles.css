@@ -384,9 +384,9 @@ header {
     display: block;
 }
 
-/*
---------------- CARRUSEL DE SOFT SKILS ------------------
-*/
+/* ==========================================================================
+   CARRUSEL DE SOFT SKILS
+   ========================================================================== */
 
 /* Oculta lo que sale del contenedor y aplica un degradado en los bordes para que aparezcan suavemente */
 .skills-scroller {
@@ -406,7 +406,7 @@ header {
     /* Cambiamos inline-flex por flex */
     width: max-content;
     /* Obliga al riel a medir exactamente lo que miden los botones juntos */
-    animation: scrollTrack 10s linear infinite;
+    animation: scrollTrack 15s linear infinite;
 }
 
 /* Detener la animación cuando el usuario pasa el cursor (opcional, pero buena práctica) */
